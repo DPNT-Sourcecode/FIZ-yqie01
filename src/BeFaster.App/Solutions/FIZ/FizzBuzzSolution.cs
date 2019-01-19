@@ -12,7 +12,7 @@ namespace BeFaster.App.Solutions.FIZ
         {
             if(NumberIsDelux(number))
             {
-
+                return "deluxe";
             }
 
             if (DivisableByThreeContainsThree(number) && DivisableByFive(number))
@@ -29,7 +29,7 @@ namespace BeFaster.App.Solutions.FIZ
 
         private static bool NumberIsDelux(float number)
         {
-            bool result = false;
+            bool result = true;
 
             if (number <= 10)
                 return result;
@@ -80,4 +80,5 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
 
