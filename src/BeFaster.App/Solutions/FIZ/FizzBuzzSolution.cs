@@ -21,6 +21,9 @@ namespace BeFaster.App.Solutions.FIZ
             if (NumberIsDelux(number) && IsOdd(number) && DivisableByFive(number))
                 return $"{_buzz} {_fake} {_deluxe}";
 
+            if (NumberIsDelux(number) && IsOdd(number))
+                return $"{_fake} {_deluxe}";
+
             if (NumberIsDelux(number) && DivisableByThreeContainsThree(number) && DivisableByFive(number))
                 return $"{_fizz} {_buzz} {_deluxe}";
 
@@ -103,4 +106,5 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
 
