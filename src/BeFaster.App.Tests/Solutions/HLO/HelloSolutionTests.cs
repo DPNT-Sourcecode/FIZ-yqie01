@@ -11,11 +11,14 @@ namespace BeFaster.App.Tests.Solutions.HLO
     [TestFixture]
     public class HelloSolutionTests
     {
-        [TestCase("jim", ExpectedResult = "hello jim")]
-        public SayHello(string name)
+        [Test]
+        public string SayHello()
         {
-            return HelloSolution.Hello(name);
+            var result = HelloSolution.Hello("jim");
+
+            Assert.Equals("hello jim", result);
+
+            return result;
         }
     }
 }
-
