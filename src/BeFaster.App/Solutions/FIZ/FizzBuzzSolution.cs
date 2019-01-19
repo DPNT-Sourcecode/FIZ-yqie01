@@ -8,11 +8,18 @@ namespace BeFaster.App.Solutions.FIZ
         static string _fizz = "fizz";
         static string _buzz  = "buzz";
         static string _deluxe = "deluxe";
+        static string _fake = "fake";
 
         public static string FizzBuzz(float number)
         {
-            if (NumberIsDelux(number) && )
-                return $"fake {_deluxe}";
+            if (NumberIsDelux(number) && IsOdd(number) && DivisableByThreeContainsThree(number) && DivisableByFive(number))
+                return $"{_fizz} {_buzz} {_fake} {_deluxe}";
+
+            if (NumberIsDelux(number) && IsOdd(number) && DivisableByThreeContainsThree(number))
+                return $"{_fizz} {_fake} {_deluxe}";
+
+            if (NumberIsDelux(number) && IsOdd(number) && DivisableByFive(number))
+                return $"{_buzz} {_fake} {_deluxe}";
 
             if (NumberIsDelux(number) && DivisableByThreeContainsThree(number) && DivisableByFive(number))
                 return $"{_fizz} {_buzz} {_deluxe}";
@@ -38,7 +45,7 @@ namespace BeFaster.App.Solutions.FIZ
             return $"{number}";
         }
 
-        private static bool IsOdd()
+        private static bool IsOdd(float number)
         {
             return (number % 2) != 0;
         }
@@ -96,3 +103,4 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
