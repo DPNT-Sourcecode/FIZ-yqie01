@@ -13,7 +13,7 @@ namespace BeFaster.App.Tests.Solutions.FIZZ
     {
         [TestCase(3, ExpectedResult = "fizz")]
         [TestCase(21, ExpectedResult = "fizz")]
-        [TestCase(22, ExpectedResult = "22")]
+        [TestCase(22, ExpectedResult = "deluxe")]
         [TestCase(83, ExpectedResult = "fizz")]
         public string DivisableByThreeReturnsFizzOtherwiseNumber(int number)
         {
@@ -58,4 +58,5 @@ namespace BeFaster.App.Tests.Solutions.FIZZ
 
     }
 }
+
 

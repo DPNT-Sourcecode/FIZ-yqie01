@@ -7,12 +7,13 @@ namespace BeFaster.App.Solutions.FIZ
     {
         static string _fizz = "fizz";
         static string _buzz  = "buzz";
+        static string _deluxe = "deluxe";
 
         public static string FizzBuzz(float number)
         {
             if(NumberIsDelux(number))
             {
-                return "deluxe";
+                return "";
             }
 
             if (DivisableByThreeContainsThree(number) && DivisableByFive(number))
@@ -32,7 +33,7 @@ namespace BeFaster.App.Solutions.FIZ
             bool result = true;
 
             if (number <= 10)
-                return result;
+                return false;
 
             var firstDigit = $"{number}"[0];
             foreach (var item in $"{number}")
@@ -80,5 +81,6 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
 
 
