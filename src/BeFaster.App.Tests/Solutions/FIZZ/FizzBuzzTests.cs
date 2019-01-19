@@ -45,9 +45,9 @@ namespace BeFaster.App.Tests.Solutions.FIZZ
             return result;
         }
 
-        [TestCase(33, ExpectedResult = "deluxe")]
-        [TestCase(222, ExpectedResult = "deluxe")]
-        [TestCase(777, ExpectedResult = "deluxe")]
+        [TestCase(33, ExpectedResult = "fizz deluxe")]
+        [TestCase(222, ExpectedResult = "fizz deluxe")]
+        [TestCase(777, ExpectedResult = "fizz deluxe")]
         [TestCase(41, ExpectedResult = "41")]
         public string Delux(int number)
         {
@@ -57,7 +57,7 @@ namespace BeFaster.App.Tests.Solutions.FIZZ
         }
 
         [TestCase(22, ExpectedResult = "deluxe")]
-        [TestCase(333, ExpectedResult = "deluxe")]
+        [TestCase(333, ExpectedResult = "fizz deluxe")]
         [TestCase(555, ExpectedResult = "fizz buzz deluxe")]
         [TestCase(777, ExpectedResult = "fizz deluxe")]
         [TestCase(41, ExpectedResult = "41")]
@@ -70,6 +70,7 @@ namespace BeFaster.App.Tests.Solutions.FIZZ
 
     }
 }
+
 
 
 
