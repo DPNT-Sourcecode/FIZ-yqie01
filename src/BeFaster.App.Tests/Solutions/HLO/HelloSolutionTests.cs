@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace BeFaster.App.Tests.Solutions.HLO
 {
-    [TestFixture]
     public class HelloSolutionTests
     {
         [Test]
@@ -16,9 +15,10 @@ namespace BeFaster.App.Tests.Solutions.HLO
         {
             var result = HelloSolution.Hello("jim");
 
-            Assert.Equals("hello jim", result);
+            Assert.AreEqual("hello jim", result);
 
             return result;
         }
     }
 }
+
