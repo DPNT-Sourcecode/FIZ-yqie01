@@ -13,9 +13,9 @@ namespace BeFaster.App.Tests.Solutions.HLO
     public class HelloSolutionTests
     {
         [TestCase("jim", ExpectedResult = "hello jim")]
-        public string SayHello()
+        public string SayHello(string name)
         {
-            var result = HelloSolution.Hello("jim");
+            var result = HelloSolution.Hello(name);
 
             Assert.AreEqual("hello jim", result);
 
@@ -23,5 +23,6 @@ namespace BeFaster.App.Tests.Solutions.HLO
         }
     }
 }
+
 
 
