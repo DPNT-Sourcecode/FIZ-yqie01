@@ -12,14 +12,15 @@ namespace BeFaster.App.Tests.Solutions.HLO
 
     public class HelloSolutionTests
     {
-        [TestCase("jim", ExpectedResult = "hello jim")]
+        [TestCase("John", ExpectedResult = "Hello, John!")]
         public string SayHello(string name)
         {
             var result = HelloSolution.Hello(name);
 
-            Assert.AreEqual("hello jim", result);
+            Assert.AreEqual("Hello, John!", result);
 
             return result;
         }
     }
 }
+
