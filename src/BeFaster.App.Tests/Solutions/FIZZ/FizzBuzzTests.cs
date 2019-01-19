@@ -32,7 +32,19 @@ namespace BeFaster.App.Tests.Solutions.FIZZ
             return result;
         }
 
+        [TestCase(15, ExpectedResult = "FizzBuzz")]
+        [TestCase(30, ExpectedResult = "FizzBuzz")]
+        [TestCase(45, ExpectedResult = "FizzBuzz")]
+        [TestCase(42, ExpectedResult = "42")]
+        public string DivisableByThreeAndFiveReturnsFizzOtherwiseNumber(int number)
+        {
+            var result = FizzBuzzSolution.FizzBuzz(number);
+
+            return result;
+        }
+
     }
 }
+
 
 

@@ -9,7 +9,7 @@ namespace BeFaster.App.Solutions.FIZ
 
         public static string FizzBuzz(float number)
         {
-            if (number % 3 == 0)
+            if ()
                 return _fizz;
 
             if (number % 5 == 0)
@@ -17,7 +17,13 @@ namespace BeFaster.App.Solutions.FIZ
 
             return $"{number}";
         }
+
+        private static bool DivisableByThree(float number)
+        {
+            return (number % 3) == 0;
+        }
     }
 }
+
 
 
