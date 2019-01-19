@@ -14,6 +14,12 @@ namespace BeFaster.App.Solutions.FIZ
             if (NumberIsDelux(number) && DivisableByThreeContainsThree(number) && DivisableByFive(number))
                 return $"{_fizz} {_buzz} {_deluxe}";
 
+            if (NumberIsDelux(number) && DivisableByThreeContainsThree(number))
+                return $"{_fizz} {_deluxe}";
+
+            if (NumberIsDelux(number) && DivisableByFive(number))
+                return $"{_buzz} {_deluxe}";
+
             if (NumberIsDelux(number))
                 return _deluxe;
 
@@ -82,3 +88,4 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
