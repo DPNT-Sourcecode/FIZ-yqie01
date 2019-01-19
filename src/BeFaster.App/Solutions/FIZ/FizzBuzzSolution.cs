@@ -40,10 +40,23 @@ namespace BeFaster.App.Solutions.FIZ
 
         private static bool DivisableByFive(float number)
         {
-            return (number % 5) == 0;
+            bool result = false;
+
+            if ((number % 5) == 0)
+            {
+                result = true;
+            }
+
+            if ($"{number}".Contains("5"))
+            {
+                result = true;
+            }
+
+            return result;
         }
     }
 }
+
 
 
 
