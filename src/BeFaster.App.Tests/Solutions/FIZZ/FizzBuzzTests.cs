@@ -58,7 +58,7 @@ namespace BeFaster.App.Tests.Solutions.FIZZ
 
         [TestCase(22, ExpectedResult = "deluxe")]
         [TestCase(333, ExpectedResult = "deluxe")]
-        [TestCase(5555, ExpectedResult = "deluxe")]
+        [TestCase(555, ExpectedResult = "fizz buzz deluxe")]
         [TestCase(41, ExpectedResult = "41")]
         public string FizzBuzzDelux(int number)
         {
@@ -69,4 +69,5 @@ namespace BeFaster.App.Tests.Solutions.FIZZ
 
     }
 }
+
 
