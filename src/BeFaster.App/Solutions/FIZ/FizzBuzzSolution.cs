@@ -4,9 +4,15 @@ namespace BeFaster.App.Solutions.FIZ
 {
     public static class FizzBuzzSolution
     {
-        public static string FizzBuzz(int number)
+        static const string _fizz = "Fizz";
+
+        public static string FizzBuzz(float number)
         {
-            throw new SolutionNotImplementedException();
+            if (number % 3 == 0)
+                return _fizz;
+
+            return $"{number}";
         }
     }
 }
+
