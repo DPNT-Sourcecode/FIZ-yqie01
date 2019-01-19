@@ -45,5 +45,17 @@ namespace BeFaster.App.Tests.Solutions.FIZZ
             return result;
         }
 
+        [TestCase(22, ExpectedResult = "deluxe")]
+        [TestCase(333, ExpectedResult = "deluxe")]
+        [TestCase(5555, ExpectedResult = "deluxe")]
+        [TestCase(41, ExpectedResult = "41")]
+        public string Delux(int number)
+        {
+            var result = FizzBuzzSolution.FizzBuzz(number);
+
+            return result;
+        }
+
     }
 }
+
