@@ -12,29 +12,26 @@ namespace BeFaster.App.Solutions.FIZ
 
         public static string FizzBuzz(float number)
         {
-            if (NumberIsDelux(number) && IsOdd(number) && DivisableByThreeContainsThree(number) && DivisableByFive(number))
+            if (IsOdd(number) && DivisableByThreeContainsThree(number) && DivisableByFive(number))
                 return $"{_fizz} {_buzz} {_fake} {_deluxe}";
 
-            if (NumberIsDelux(number) && IsOdd(number) && DivisableByThreeContainsThree(number))
+            if (IsOdd(number) && DivisableByThreeContainsThree(number))
                 return $"{_fizz} {_fake} {_deluxe}";
 
-            if (NumberIsDelux(number) && IsOdd(number) && DivisableByFive(number))
+            if (IsOdd(number) && DivisableByFive(number))
                 return $"{_buzz} {_fake} {_deluxe}";
 
-            if (NumberIsDelux(number) && IsOdd(number))
+            if (IsOdd(number))
                 return $"{_fake} {_deluxe}";
 
-            if (NumberIsDelux(number) && DivisableByThreeContainsThree(number) && DivisableByFive(number))
+            if (DivisableByThreeContainsThree(number) && DivisableByFive(number))
                 return $"{_fizz} {_buzz} {_deluxe}";
 
-            if (NumberIsDelux(number) && DivisableByThreeContainsThree(number))
+            if (DivisableByThreeContainsThree(number))
                 return $"{_fizz} {_deluxe}";
 
-            if (NumberIsDelux(number) && DivisableByFive(number))
+            if (DivisableByFive(number))
                 return $"{_buzz} {_deluxe}";
-
-            if (NumberIsDelux(number))
-                return _deluxe;
 
             if (DivisableByThreeContainsThree(number) && DivisableByFive(number))
                 return $"{_fizz} {_buzz}";
@@ -51,24 +48,6 @@ namespace BeFaster.App.Solutions.FIZ
         private static bool IsOdd(float number)
         {
             return (number % 2) != 0;
-        }
-
-        private static bool NumberIsDelux(float number)
-        {
-            bool result = true;
-
-            if (number <= 10)
-                return false;
-
-            var firstDigit = $"{number}"[0];
-            foreach (var item in $"{number}")
-            {
-                if(!item.Equals(firstDigit))
-                {
-                    result = false;
-                }
-            }
-            return result;
         }
 
         private static bool DivisableByThreeContainsThree(float number)
@@ -106,5 +85,6 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
 
 
