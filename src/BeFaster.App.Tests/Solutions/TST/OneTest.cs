@@ -10,5 +10,12 @@ namespace BeFaster.App.Tests.Solutions.TST
         public void RunApply() {
             Assert.AreEqual(One.apply(), 1);
         }
+
+        [Test]
+        public void RunApply2()
+        {
+            Assert.AreEqual(Two.apply(), 2);
+        }
     }
 }
+
