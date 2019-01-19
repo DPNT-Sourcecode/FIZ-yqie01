@@ -23,7 +23,19 @@ namespace BeFaster.App.Solutions.FIZ
 
         private static bool DivisableByThreeContainsThree(float number)
         {
-            return (number % 3) == 0;
+            bool result = false;
+
+            if((number % 3) == 0)
+            {
+                result = true;
+            }
+
+            if ($"{number}".Contains("3"))
+            {
+                result = true;
+            }
+
+            return result;
         }
 
         private static bool DivisableByFive(float number)
@@ -32,5 +44,6 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
 
 
