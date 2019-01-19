@@ -8,9 +8,11 @@ using System.Threading.Tasks;
 
 namespace BeFaster.App.Tests.Solutions.HLO
 {
+    [TestFixture]
+
     public class HelloSolutionTests
     {
-        [Test]
+        [TestCase("jim", ExpectedResult = "hello jim")]
         public string SayHello()
         {
             var result = HelloSolution.Hello("jim");
@@ -21,4 +23,5 @@ namespace BeFaster.App.Tests.Solutions.HLO
         }
     }
 }
+
 
