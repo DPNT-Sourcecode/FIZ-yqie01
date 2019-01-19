@@ -1,4 +1,5 @@
-﻿using BeFaster.Runner.Exceptions;
+﻿using System;
+using BeFaster.Runner.Exceptions;
 
 namespace BeFaster.App.Solutions.FIZ
 {
@@ -9,6 +10,11 @@ namespace BeFaster.App.Solutions.FIZ
 
         public static string FizzBuzz(float number)
         {
+            if(NumberIsDelux(number))
+            {
+
+            }
+
             if (DivisableByThreeContainsThree(number) && DivisableByFive(number))
                 return $"{_fizz} {_buzz}";
 
@@ -19,6 +25,24 @@ namespace BeFaster.App.Solutions.FIZ
                 return _buzz;
 
             return $"{number}";
+        }
+
+        private static bool NumberIsDelux(float number)
+        {
+            bool result = false;
+
+            if (number <= 10)
+                return result;
+
+            var firstDigit = $"{number}"[0];
+            foreach (var item in $"{number}")
+            {
+                if(!item.Equals(firstDigit))
+                {
+                    result = false;
+                }
+            }
+            return result;
         }
 
         private static bool DivisableByThreeContainsThree(float number)
@@ -56,3 +80,4 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
