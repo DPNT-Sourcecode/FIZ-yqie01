@@ -9,10 +9,10 @@ namespace BeFaster.App.Solutions.FIZ
 
         public static string FizzBuzz(float number)
         {
-            if (DivisableByThree(number) && DivisableByFive(number))
+            if (DivisableByThreeContainsThree(number) && DivisableByFive(number))
                 return $"{_fizz} {_buzz}";
 
-            if (DivisableByThree(number))
+            if (DivisableByThreeContainsThree(number))
                 return _fizz;
 
             if (DivisableByFive(number))
@@ -21,7 +21,7 @@ namespace BeFaster.App.Solutions.FIZ
             return $"{number}";
         }
 
-        private static bool DivisableByThree(float number)
+        private static bool DivisableByThreeContainsThree(float number)
         {
             return (number % 3) == 0;
         }
@@ -32,4 +32,5 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
 
