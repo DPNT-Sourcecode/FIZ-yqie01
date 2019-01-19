@@ -4,13 +4,13 @@ namespace BeFaster.App.Solutions.FIZ
 {
     public static class FizzBuzzSolution
     {
-        static string _fizz = "Fizz";
-        static string _buzz  = "Buzz";
+        static string _fizz = "fizz";
+        static string _buzz  = "buzz";
 
         public static string FizzBuzz(float number)
         {
             if (DivisableByThree(number) && DivisableByFive(number))
-                return $"{_fizz}{_buzz}";
+                return $"{_fizz} {_buzz}";
 
             if (DivisableByThree(number))
                 return _fizz;
@@ -32,3 +32,4 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
